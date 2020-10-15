@@ -399,10 +399,14 @@ bob | 22
 将Markdown转化为HTML文档后,用`Chrome`
 打开它，选择`打印`,然后`更改目标打印机`为`另存为PDF`，再进行一些设置后，即可保存为PDF文档
 
+
 #### 3.导出为word
 
 `pandoc -o hello.docx hello.md`
 
+
+
+**<p style="color: red">建议再下载一个`typora`亲测命令行方式导出文件一坨屎，另外Typora也是一款非常优秀的Markdown编辑器，值得一用。</p>**
 
 
 
