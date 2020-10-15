@@ -367,4 +367,44 @@ bob | 22
     + [ ]JavaScript
 - [ ]Sleep
 
+## 格式转换
+
+### Pandoc
+
+#### 1.导出为HTML
+
+[Installing](https://www.pandoc.org/) Pandoc
+
+打开命令行，进入文档所在目录
+
+执行下面的命令，将Markdown转换为HTML:
+
+`pandoc -o hello.html hello.md`
+
+自定义HTML样式:
+
+`pandoc -o hello.html -c style.css hello.md`
+
+
+
+
+#### 2.导出为PDF
+
+`pandoc -o hello.pdf hello.md`
+
+同样也可通过`-c style.css`来指定样式文件
+
+##### chrome
+
+将Markdown转化为HTML文档后,用`Chrome`
+打开它，选择`打印`,然后`更改目标打印机`为`另存为PDF`，再进行一些设置后，即可保存为PDF文档
+
+#### 3.导出为word
+
+`pandoc -o hello.docx hello.md`
+
+
+
+
+
 
