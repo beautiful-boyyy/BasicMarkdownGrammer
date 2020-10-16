@@ -89,7 +89,10 @@ or just left
     3.数字的序列并不会影响生成的列表
     4.但仍然推荐按照自然序列(1, 2, 3...)编写
 
-1. 有序列表以数字和开始;
+
+
+
+1. 有序列表以数字和'.'开始;
 
 3. 数字的序列并不会影响生成的列表序列;
 
@@ -143,7 +146,7 @@ or just left
 代码快前后需要有至少一个空行，且每行代码前需要有至少一个Tab或四个空格
 
 ### 2.行内代码
-通过``插入行内代码
+通过``(位于Tab键上面)插入行内代码
 
 `<title>Markdown</title>`
 
@@ -158,6 +161,10 @@ or just left
 
 
 
+
+***
+---
+___
 
 2.多个字符之间可以有空格（空白符）,但不能有其他字符
 
@@ -177,19 +184,30 @@ or just left
 
 1.格式为`[link text](URL)`
 
+`[Baidu](http://www.baidu.com)
+`
+
 [Baidu](http://www.baidu.com)
 
 2.指向本地文件的链接
 
+`[icon.png](./images/icon.png)
+`
+
 [icon.png](./images/icon.png)
 
-3.包含'title'的链接
+3.包含'title'(可选)的链接
+
+`[Baidu](http://www.baidu.com/ "Baidu")
+`
 
 [Baidu](http://www.baidu.com/ "Baidu")
 
 ### 2.参考式
 
 1.首先定义链接
+
+`[Baidu][link]`
 
 [Baidu][link]第二个方阔号内为链接独有的**识别符**，可以是字母、数字、空白或标点符号，不区分大小写。
 
@@ -202,7 +220,7 @@ or just left
 3.也可以**省略** *识别符*
 
     [Baidu][]
-    [Baidu]: http://www.google.com/ "Google"
+    [Baidu]: http://www.baidu.com/ "Baidu"
 
 
 
@@ -233,7 +251,7 @@ or just left
 
 ### 1.行内式
 
-    ![text.jpg](./text.jpg)
+    ![text.jpg](./3265208.jpeg title)
 
 ![text.jpg](./3265208.jpeg "picture")
 
@@ -260,17 +278,20 @@ or just left
 
 ### 3.制定图片的显示大小
 
+`<img src = "./3265208.jpeg" width = "50" height = "50" />
+`
+
 <img src = "./3265208.jpeg" width = "50" height = "50" />
 
 ## 强调
 
 1.使用`**`或`__`包括的文本会被转换为`<em></em>`, 通过表现为斜体
 
-只是用来*演示*的_文本_
+这是用来*演示*的 _文本_
 
 2.使用`** **`和`__ __`包括的文本会被转换为`<strong></strong>`,通常表现为加粗:
 
-这是用来**演示**的文本
+这是用来**演示**的 __文本__
 
 3.`*`,`_`内侧不能有空白
 
@@ -283,16 +304,35 @@ or just left
 
     这就是~~~删除线~~~
 
-这就是~~~删除线~~~
+这就是~~~删除线~~~。
 
 
 ## 代码块语法高亮
+
+    ```
+    <p>code here</p>
+    ```
+
 
 ```
 <p>code here</p>
 ```
 
 ### 代码高亮
+
+    ```c++
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+        cout << "Hello Markdown";
+        return 0;    
+    }
+    ```
+
+
+
+
 
 ```c++
 #include <iostream>
@@ -307,6 +347,8 @@ int main()
 
 
 
+第一个\`\`\`后面可以设置不同语言的语法高亮
+
 ## 表格
 
 ### 1.单元格和表头 
@@ -318,6 +360,7 @@ int main()
     LearShare | 12
     Mike | 32
     bob | 22
+
 
 
 
@@ -336,6 +379,15 @@ bob | 22
 + `:--:`代表居中对齐
 + `---:`代表右对齐
 
+      | left | center | right |
+      | :--- | :---:  | ----: |
+      | aaa | bbbb | cccc |
+      | a | b | c |
+
+
+
+
+
 | left | center | right |
 | :--- | :---:  | ----: |
 | aaa | bbbb | cccc |
@@ -347,13 +399,36 @@ bob | 22
 
 表格中可以插入其他的Markdown中的行内标记:
 
+
+
+    | name | age | blog |
+    | ---- | --- | ---- |
+    | _LearnShare_| 12 | [LearnShare](http://xianbai.me) |
+    | __Mike__ | 32 | [Mike](http://mike.me) |
+
+
+
+
+
 | name | age | blog |
 | ---- | --- | ---- |
 | _LearnShare_| 12 | [LearnShare](http://xianbai.me) |
 | __Mike__ | 32 | [Mike](http://mike.me) |
 
-
 ## Task List
+
+    - [✔]Eat
+    - [ ]Code
+        + HTMl
+        + CSS
+        + JavaScript
+    - [ ]Eat
+    - [ ]Code
+        + [ ]HTML
+        + [ ]CSS
+        + [ ]JavaScript
+    - [ ]Sleep
+
 
 - [✔]Eat
 - [ ]Code
