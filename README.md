@@ -191,10 +191,10 @@ ___
 
 2.指向本地文件的链接
 
-`[icon.png](./images/icon.png)
+`![icon.png](./images/icon.png)
 `
 
-[icon.png](./images/icon.png)
+![icon.png](./images/icon.png)
 
 3.包含'title'(可选)的链接
 
